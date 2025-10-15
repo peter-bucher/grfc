@@ -1,40 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meine Externe Seite</title>
-    <style>
-        #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>Fenster-Öffner</title>
+    <script>
+        window.onload = function() {
+            window.open("https://deine-zielseite.netlify.app", "popup", "width=600,height=400");
+            window.close();
+        };
+    </script>
 </head>
 <body>
-    <h1>Willkommen auf meiner externen Seite!</h1>
-    <button onclick="showPopup()">Zeige Popup</button>
-
-    <div id="popup">
-        <h2>Popup-Inhalt</h2>
-        <p>Hier steht dein Popup-Inhalt.</p>
-        <button onclick="hidePopup()">Schließen</button>
-    </div>
-
-    <script>
-        function showPopup() {
-            document.getElementById('popup').style.display = 'block';
-        }
-        function hidePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-        // Optional: Popup automatisch anzeigen
-        window.onload = showPopup;
-    </script>
+    <p>Falls das Fenster nicht geöffnet wird, <a href="https://deine-zielseite.netlify.app" target="_blank">klicke hier</a>.</p>
 </body>
 </html>
